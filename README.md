@@ -56,10 +56,14 @@ Just drag a plugin into cogs and run eb_launcher.py with a double click. Then ju
         2. Run the installer.sh
 
             - If on Windows, use `installer.bat`
+            
+            Bash:
 
             ```sh
             sh installer.sh
             ```
+            
+            Batch:
 
             ```
             installer.bat
