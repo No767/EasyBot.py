@@ -1,11 +1,24 @@
 # EasyBot.py Dependencies
 
-## Python 3 (Install the latest version preferably)
+## Core Dependencies
 
-- pip (Bundled with Python 3. Note that on Linux, you will need to install pip3 separately depending on your distro)
-- pycord (discord.py is no longer maintained)
-- qrcode
-- SQLAlchemy (Replaces SQLite3 lib to prevent SQL injection attacks) 
-- psycopg2 (Used for DisQuest-Postgres Plugin)
-- python-dotenv
-- wget
+- Python 3
+- Pip (Use the `get-pip.py` method if you are on Ubuntu)
+- Pycord
+- SQLAlchemy
+- Wget
+
+## Plugin Dependencies
+
+- Python-Dotenv
+- Asyncpg
+- Asyncpraw
+- AIOSqlite
+- AIOHTTP
+- Orjson
+- Aiodns
+- Brotlipy
+- Cchardet
+- Deep-Translator
+- Requests
+- BeautifulSoup4
