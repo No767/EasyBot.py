@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "EasyBot.py"
+version = "2.3.0"
+description = "A simple, no fuss Discord bot that can be deployed without any code"
+authors = ["No767 <73260931+No767@users.noreply.github.com>"]
+license = "CC0-1.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+py-cord = {version = "2.0.0b5", extras = ["voice"]}
+qrcode = {extras = ["pil"], version = "^7.3.1"}
+SQLAlchemy = "^1.4.32"
+wget = "^3.2"
+asyncpg = "^0.25.0"
+asyncpraw = "^7.5.0"
+aiosqlite = "^0.17.0"
+orjson = "^3.6.7"
+aiodns = "^3.0.0"
+brotlipy = "^0.7.0"
+deep-translator = "^1.8.0"
+requests = "^2.27.1"
+beautifulsoup4 = "^4.10.0"
+aiohttp = "^3.8.1"
+charset-normalizer = "^2.0.12"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

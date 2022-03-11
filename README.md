@@ -1,84 +1,72 @@
-# Welcome to EasyBot.py
+<div align=center>
 
-![alt text](https://repository-images.githubusercontent.com/336690911/1d755480-dea9-11eb-99dc-e2320ce13405)
+# EasyBot.py
 
-## Ready to start running your own Discord Bot?
+![more alt text](./assets/logo.png)
 
-Do it Easy, Beautiful, Modular, and Fast with EasyBot.py
+A simple, no fuss Discord bot that can be deployed without any code
 
-### EasyBot.py is the easy to use framework for people to develop new commands and set up bots with speed
+<div align=left>
 
-EasyBot.py helps install all the dependencies that will be needed when you add a new plugin so that you will have a guranteed perfect first experience. This also makes it easier for bot developers when they want to develop on multiple machines as they wouldn't have to keep a requirements.txt file of all of the modules they used. EasyBot.py also has a commands programmer for first time bot makers so they can set up simple commands to interact with their patrons! While you're developing, just use the restart command to restart the bot without having to close the entire process!
+## Installation
 
-### EasyBot.py is simple and beautiful
+### Windows 
 
-EasyBot.py strives to bring a beautiful experience to your users so that they will always get a great looking bot. We use embeds with fun colors on every output so it's always colorful and fun. EasyBot.py also features QR codes for inviting your bot to new servers.
+1. Install [Python 3.10](https://www.python.org/)
+2. Install [Git](https://git-scm.com/)
+3. Clone the EasyBot.py Repo 
 
-### EasyBot.py helps your bot succeed
+```sh
+git clone https://github.com/Isaac-To/EasyBot.py.git
+```
 
-EasyBot.py contains commands built specifically for Bot Admins who do not wish to verify their IDs with Discord. EasyBot.py can use multiple tokens for the exact same experience across all of them so that there's always space for every server. You also get tips on how to grow your bot and tools to prune out smaller servers so that you have space for larger ones!
+or alternatively, download the latest release of EasyBot.py and unzip it.
+4. Install the dependencies by running this cmd: 
 
-### EasyBot.py is modular
+```sh
+cd installers && pip install -r requirements.txt
+```
 
-Want to add more features? Just drag and drop a discord.py cog file into the cogs folder! And if you don't like it? Delete the file and restart!
+or use Poetry to install the dependencies:
 
-### Did you need speed?
+```sh
+cd EasyBot.py && poetry env use 3.10
+poetry install
+```
 
-EasyBot is designed to be LIGHTWEIGHT and runs on a mere 26mb (without external plugins) of ram! It also runs every bot token on a different process so that you can take advantage of multicored systems to keep things fast
+5. If using Pip, run the `eb_control.py` file to start the bot. If using Poetry, open up a shell (`poetry shell`) and run `eb_control.py`.
 
-### There's nothing you need to know
+### Linux 
 
-Just drag a plugin into cogs and run eb_launcher.py with a double click. Then just follow the instructions on the command line to start!
+1. Install or compile Python 3.10. If you are compiling from source, and using Debian/Ubuntu, make sure that have these installed:
 
-## Ready to get started?
+```sh
+sudo apt-get update && sudo apt-get upgrade 
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev \
+       libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+       libncurses5-dev libncursesw5-dev xz-utils tk-dev lzma liblzma-dev libffi-dev python3.10-dev
+```
 
-1. Download the latest release of EasyBot.py from [releases](https://github.com/chisaku-dev/EasyBot.py/releases/) and unzip! Or if you wish, download this repo as a .zip or clone it.
-2. Open installers and choose the proper version for your installation and skip to step 4 or alternatively install the dependancies manually.
-3. Installing Dependencies
-   1. Install Python 3
+2. Install Git
 
-      - If using Windows go to [python.org](https://www.python.org/) and download the release that matches your OS
+3. Clone the EasyBot.py Repo 
 
-      - If you're on Ubuntu, you can use:
+```sh
+git clone https://github.com/Isaac-To/EasyBot.py.git
+```
 
-           ```sh
-           sudo apt install python3
-           ```
+or alternatively, download the latest release of EasyBot.py and unzip it.
+4. Install the dependencies by running this cmd: 
 
-   2. Install the dependencies
+```sh
+cd installers && pip install -r requirements.txt
+```
 
-        1. Enter the installers folder
+or use Poetry to install the dependencies:
 
-            ```sh
-            cd installers
-            ```
+```sh
+cd EasyBot.py && poetry env use 3.10
+poetry install
+```
 
-        2. Run the installer.sh
-
-            - If on Windows, use `installer.bat`
-            
-            Bash:
-
-            ```sh
-            sh installer.sh
-            ```
-            
-            Batch:
-
-            ```
-            installer.bat
-            ```
-
-4. Go to eb_files and run eb_control.py
-    1. Leave installers and enter eb_files
-
-        ```sh
-        cd ..
-        cd eb_files
-        ```
-
-    2. Run the bot process controller
-
-        ```sh
-        python3 eb_control.py
-        ```
+5. If using Pip, run the `eb_control.py` file to start the bot. If using Poetry, open up a shell (`poetry shell`) and run `eb_control.py`.
