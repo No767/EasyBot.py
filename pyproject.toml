@@ -23,6 +23,8 @@ aiohttp = "^3.8.1"
 charset-normalizer = "^2.1.0"
 cchardet = "^2.1.7"
 Brotli = "^1.0.9"
+typer = {extras = ["all"], version = "^0.6.1"}
+pyfiglet = "^0.8.post1"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.20.0"

@@ -51,3 +51,5 @@ eb_files/cogs/plugin_tools/makeyourownbot.png
 .dccache
 .idea
 Pipfile.lock
+SimpleBot/bots.db
+__pycache__
