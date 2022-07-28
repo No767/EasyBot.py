@@ -1,4 +1,6 @@
 import asyncio
+import os
+import pathlib
 import re
 import uuid
 
@@ -144,6 +146,11 @@ def start(
         if len(mainRes) == 0:
             raise ValueError
         else:
+            filePath = os.path.exists(
+                os.path.join(pathlib.Path(__file__).parents[0], "Logs")
+            )
+            if filePath is False:
+                os.mkdir(os.path.join(pathlib.Path(__file__).parents[0], "Logs"))
             for items in mainRes:
                 mainItems = dict(items)
             botToken = mainItems["token"]
