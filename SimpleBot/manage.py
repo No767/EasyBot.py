@@ -6,13 +6,14 @@ import typer
 from pyfiglet import Figlet
 from rich.console import Console
 from rich.table import Table
-from SimpleBot_Utils import SimpleBotUtils
+from SimpleBot_Utils import SBProcManager, SimpleBotUtils
 
 console = Console()
 
 app = typer.Typer()
 
 sbUtils = SimpleBotUtils()
+procManager = SBProcManager()
 uriConnection = "sqlite+aiosqlite:///bots.db"
 
 
@@ -129,6 +130,36 @@ def view_one(name: str):
         print(
             f"There isn't any entries with the name of {name} in the DB. Please add the bot first."
         )
+
+
+@app.command()
+def start(
+    name: str = typer.Argument(
+        default=None, help="The name of the bot you wish to start up"
+    )
+):
+    """Starts the bot of your choice"""
+    mainRes = asyncio.run(sbUtils.obtainBot(name=name, uri=uriConnection))
+    try:
+        if len(mainRes) == 0:
+            raise ValueError
+        else:
+            for items in mainRes:
+                mainItems = dict(items)
+            botToken = mainItems["token"]
+            print(f"Booting {name}...")
+            procManager.boot(name, botToken)
+    except ValueError:
+        print(
+            f"There are no bots named {name} within the DB. Please add the bot first."
+        )
+
+
+@app.command()
+def stop(bot_name: str):
+    """Stops the bot"""
+    procManager.stop(bot_name)
+    print(f"{bot_name} stopped")
 
 
 if __name__ == "__main__":
