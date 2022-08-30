@@ -1,6 +1,4 @@
 import logging
-import os
-import pathlib
 import sys
 from time import strftime
 
@@ -36,13 +34,16 @@ def main(token: str):
         token (str): Discord Bot Token
     """
     try:
-        cogs = [
-            f"{f[:-3]}"
-            for f in os.listdir(os.path.join(pathlib.Path(__file__).parents[0], "Cogs"))
-            if f.endswith(".py")
-        ]
-        for extensions in cogs:
-            bot.load_extension(extensions)
+        cogs = ["Cogs.maintest"]
+        for item in cogs:
+            bot.load_extension(item)
+        # path = Path(__file__).parents[1]
+        # print(path)
+        # cogsList = os.listdir(os.path.join(path, "Core", "Cogs"))
+        # print(cogsList)
+        # for items in cogsList:
+        #     if items.endswith(".py"):
+        #         bot.load_extension(f"{items[:-3]}")
         bot.run(token)
     except KeyboardInterrupt:
         logging.info("Shutting down...")

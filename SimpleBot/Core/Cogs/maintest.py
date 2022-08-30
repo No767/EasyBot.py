@@ -7,7 +7,7 @@ class MainTest(commands.Cog):
         self.bot = bot
 
     @slash_command(
-        name="test",
+        name="maintest",
         description="it's just a test command",
         guild_ids=[866199405090308116],
     )
