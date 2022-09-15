@@ -31,6 +31,8 @@ with open(yamlConfig, "r") as f:
         uriConnection = f"postgresql+asyncpg://{data['db']['user']}:{data['db']['password']}@{data['db']['ip']}:{data['db']['port']}/{data['db']['database']}"
     elif data["db"]["db_engine"] == "MySQL":
         uriConnection = f"mysql+asyncmy://{data['db']['user']}:{data['db']['password']}@{data['db']['ip']}:{data['db']['port']}/{data['db']['database']}"
+    else:
+        uriConnection = "sqlite+aiosqlite:///bots.db"
 
 
 def main():
