@@ -1,10 +1,11 @@
 import asyncio
 import os
 import pathlib
-import re
 import uuid
+from pathlib import Path
 
 import typer
+import yaml
 from pyfiglet import Figlet
 from rich.console import Console
 from rich.table import Table
@@ -16,7 +17,20 @@ app = typer.Typer()
 
 sbUtils = SimpleBotUtils()
 procManager = SBProcManager()
-uriConnection = "sqlite+aiosqlite:///bots.db"
+
+path = Path(__file__).parents[0]
+yamlConfig = os.path.join(str(path), "config.yaml")
+
+uriConnection = ""
+
+with open(yamlConfig, "r") as f:
+    data = yaml.safe_load(f)
+    if data["db"]["db_engine"] == "SQLite3":
+        uriConnection = "sqlite+aiosqlite:///bots.db"
+    elif data["db"]["db_engine"] == "PostgreSQL":
+        uriConnection = f"postgresql+asyncpg://{data['db']['user']}:{data['db']['password']}@{data['db']['ip']}:{data['db']['port']}/{data['db']['database']}"
+    elif data["db"]["db_engine"] == "MySQL":
+        uriConnection = f"mysql+asyncmy://{data['db']['user']}:{data['db']['password']}@{data['db']['ip']}:{data['db']['port']}/{data['db']['database']}"
 
 
 def main():
@@ -26,16 +40,15 @@ def main():
 @app.command()
 def info():
     """Prints info"""
-    with open("info", "r") as file:
-        reader = file.readlines()
-        listOfWords = [re.sub("[\n]+", "", item) for item in reader]
+    path = Path(__file__).parents[0]
+    yamlConfig = os.path.join(str(path), "config.yaml")
+    with open(yamlConfig, "r") as file:
+        data = yaml.safe_load(file)
         f = Figlet(font="slant")
         print(f.renderText("SimpleBot"))
-        console.print(
-            f"[bold white]Version:[/bold white] [white]{listOfWords[0]}[/white]"
-        )
-        console.print(f"[bold white]DB: [/bold white][white]{listOfWords[1]}[/white]")
-        console.print("[bold white]Author:[/bold white] [white]No767[/white]")
+        console.print(f"Version: {data['version']}")
+        console.print(f"Database Engine: {data['db']['db_engine']}")
+        console.print("Author: No767")
 
 
 @app.command()

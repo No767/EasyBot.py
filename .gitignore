@@ -54,3 +54,5 @@ Pipfile.lock
 SimpleBot/bots.db
 __pycache__
 SimpleBot/Logs
+config-dev.yaml
+.env

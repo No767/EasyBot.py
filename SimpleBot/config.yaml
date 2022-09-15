@@ -1,0 +1,16 @@
+# DO NOT CHANGE THIS
+version: v3.0.0-dev
+
+db:
+
+  # Valid db_engine values:
+  # SQLite3, MySQL, PostgreSQL
+  db_engine: SQLite3
+
+  # If you are using SQLite3 (default), you won't be needing this
+  # But if you are using PostgreSQL or MySQL/MariaDB, you will need to fill this in
+  password: "password"
+  ip: 127.0.0.1
+  port: 5432
+  user: "user"
+  database: "bots"

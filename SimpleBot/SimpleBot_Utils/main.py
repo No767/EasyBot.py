@@ -9,8 +9,8 @@ class DiscordBots(Base):
 
     __tablename__ = "discord_bots"
 
-    uuid = Column(String, primary_key=True)
-    name = Column(String)
+    uuid = Column(String(255), primary_key=True)
+    name = Column(String(255))
     token = Column(Text)
 
     def __iter__(self):
