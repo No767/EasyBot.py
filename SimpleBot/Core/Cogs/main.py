@@ -9,7 +9,6 @@ class MainTest(commands.Cog):
     @slash_command(
         name="maintest",
         description="it's just a test command",
-        guild_ids=[866199405090308116],
     )
     async def testing(self, ctx):
         await ctx.respond("test")
