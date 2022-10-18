@@ -163,7 +163,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 dev = ["cloudpickle", "coverage[toml] (>=5.0.2)", "furo", "hypothesis", "mypy", "pre-commit", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "six", "sphinx", "sphinx-notfound-page", "zope.interface"]
 docs = ["furo", "sphinx", "sphinx-notfound-page", "zope.interface"]
 tests = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "six", "zope.interface"]
-tests_no_zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "six"]
+tests-no-zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "six"]
 
 [[package]]
 name = "beautifulsoup4"
@@ -232,7 +232,7 @@ optional = false
 python-versions = ">=3.6.0"
 
 [package.extras]
-unicode_backport = ["unicodedata2"]
+unicode-backport = ["unicodedata2"]
 
 [[package]]
 name = "click"
@@ -266,7 +266,7 @@ test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 
 [[package]]
 name = "deep-translator"
-version = "1.8.3"
+version = "1.9.0"
 description = "A flexible free and unlimited python tool to translate between different languages in a simple way using multiple translators"
 category = "main"
 optional = false
@@ -525,7 +525,7 @@ urllib3 = ">=1.21.1,<1.27"
 
 [package.extras]
 socks = ["PySocks (>=1.5.6,!=1.5.7)"]
-use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
+use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
 name = "rich"
@@ -598,19 +598,19 @@ aiomysql = ["aiomysql", "greenlet (!=0.4.17)"]
 aiosqlite = ["aiosqlite", "greenlet (!=0.4.17)", "typing_extensions (!=3.10.0.1)"]
 asyncio = ["greenlet (!=0.4.17)"]
 asyncmy = ["asyncmy (>=0.2.3,!=0.2.4)", "greenlet (!=0.4.17)"]
-mariadb_connector = ["mariadb (>=1.0.1,!=1.1.2)"]
+mariadb-connector = ["mariadb (>=1.0.1,!=1.1.2)"]
 mssql = ["pyodbc"]
-mssql_pymssql = ["pymssql"]
-mssql_pyodbc = ["pyodbc"]
+mssql-pymssql = ["pymssql"]
+mssql-pyodbc = ["pyodbc"]
 mypy = ["mypy (>=0.910)", "sqlalchemy2-stubs"]
 mysql = ["mysqlclient (>=1.4.0)", "mysqlclient (>=1.4.0,<2)"]
-mysql_connector = ["mysql-connector-python"]
+mysql-connector = ["mysql-connector-python"]
 oracle = ["cx_oracle (>=7)", "cx_oracle (>=7,<8)"]
 postgresql = ["psycopg2 (>=2.7)"]
-postgresql_asyncpg = ["asyncpg", "greenlet (!=0.4.17)"]
-postgresql_pg8000 = ["pg8000 (>=1.16.6,!=1.29.0)"]
-postgresql_psycopg2binary = ["psycopg2-binary"]
-postgresql_psycopg2cffi = ["psycopg2cffi"]
+postgresql-asyncpg = ["asyncpg", "greenlet (!=0.4.17)"]
+postgresql-pg8000 = ["pg8000 (>=1.16.6,!=1.29.0)"]
+postgresql-psycopg2binary = ["psycopg2-binary"]
+postgresql-psycopg2cffi = ["psycopg2cffi"]
 pymysql = ["pymysql", "pymysql (<1)"]
 sqlcipher = ["sqlcipher3_binary"]
 
@@ -719,7 +719,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "b6ced4ac8ffa645814386b4c261bfca8a767f8898ed6f98a5f7e140e87f1727c"
+content-hash = "6930ec0397d0948336f474ae4088738ab79a1e44903c79f75e792ba7ced76561"
 
 [metadata.files]
 aiodns = [
@@ -1069,8 +1069,8 @@ commonmark = [
     {file = "commonmark-0.9.1.tar.gz", hash = "sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"},
 ]
 deep-translator = [
-    {file = "deep-translator-1.8.3.tar.gz", hash = "sha256:f584c3beb9b943c9391bba83174e7ae75231315d41793720200312c54fdbc0cd"},
-    {file = "deep_translator-1.8.3-py3-none-any.whl", hash = "sha256:7ea7b30622747c82f689c836ef164dd001569217da911646a6a32db1a2524c19"},
+    {file = "deep-translator-1.9.0.tar.gz", hash = "sha256:c0fa55568a5bbeec3bc2b799e1fd072f3f7f349832618205b6dc38ae1242d71a"},
+    {file = "deep_translator-1.9.0-py3-none-any.whl", hash = "sha256:563484f4462098e4ecc55aa2099b78bca0d619ecc6272049856ccf19d59eced5"},
 ]
 distlib = [
     {file = "distlib-0.3.5-py2.py3-none-any.whl", hash = "sha256:b710088c59f06338ca514800ad795a132da19fda270e3ce4affc74abf955a26c"},
